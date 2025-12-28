@@ -7,3 +7,4 @@ langchain-experimental
 gradio
 numpy==1.23.5
 google-generativeai
+langsmith
