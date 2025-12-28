@@ -1,7 +1,6 @@
 import pandas as pd
 import logging
 import os
-from langchain.agents.agent_types import AgentType
 from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langsmith import traceable
@@ -49,7 +48,7 @@ class PandasGptAgent:
             ),
             c360,
             verbose=True,
-            agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+            agent_type="zero-shot-react-description",
             prefix=prefix,
             allow_dangerous_code=True
         )
