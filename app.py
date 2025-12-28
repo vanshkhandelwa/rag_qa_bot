@@ -109,9 +109,9 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
         feedback_bad.click(lambda: on_feedback("negative"), outputs=feedback_output)
 
 if __name__ == "__main__":
-    # Get port from environment variable (for Render deployment)
-    port = int(os.environ.get("GRADIO_SERVER_PORT", 7860))
-    server_name = os.environ.get("GRADIO_SERVER_NAME", "127.0.0.1")
+    # Get port from environment variable (Render uses PORT, fallback to 7860 for local)
+    port = int(os.environ.get("PORT", os.environ.get("GRADIO_SERVER_PORT", 7860)))
+    server_name = os.environ.get("GRADIO_SERVER_NAME", "0.0.0.0")
     
     demo.launch(
         server_name=server_name,
