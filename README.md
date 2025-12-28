@@ -10,7 +10,10 @@ pinned: false
 license: mit
 ---
 
-# Pandas_QA_Bot
+# Pandas QA Bot 🤖
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
 Using Langchain, Gradio and Google Gemini for creating an interactive question answering bot.
 
 ## Features
