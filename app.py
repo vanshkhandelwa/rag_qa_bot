@@ -114,6 +114,7 @@ if __name__ == "__main__":
     
     print(f"Starting Gradio app on 0.0.0.0:{port}")
     
+    demo.queue()  # Enable queuing for production
     demo.launch(
         server_name="0.0.0.0",
         server_port=port,
